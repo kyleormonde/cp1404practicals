@@ -1,0 +1,14 @@
+Try This Out:
+Line 1; smallest 5 biggest 20
+
+Line 2; smallest 3, biggest 9, no 4s.
+
+Line 3; smallest 2.5, biggest 5.5
+
+Exceptions:
+1. When numerator or denominator aren't valid numbers
+ (characters, spaces, none)
+
+2. When denominator is 0
+
+3. Yes
