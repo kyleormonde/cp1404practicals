@@ -17,7 +17,7 @@ def main():
     while not is_valid_password(password):
         print("Invalid password!")
         password = input("> ")
-    print("Your {}-character password is valid: {}".format(len(password),password))
+    print("Your {}-character password is valid: {}".format(len(password), password))
 
 
 def is_valid_password(password):
@@ -48,14 +48,12 @@ def is_valid_password(password):
     # TODO: if any of the 'normal' counts are zero, return False
     if count_lower == 0 or count_upper == 0 or count_digit == 0:
         return False
-        pass
 
     # TODO: if special characters are required, then check the count of those
     # and return False if it's zero
     if SPECIAL_CHARACTERS:
         if count_special == 0:
             return False
-        pass
     # if we get here (without returning False), then the password must be valid
     return True
 
