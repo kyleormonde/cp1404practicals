@@ -9,12 +9,12 @@ def get_name():
     # while name.strip(' ') == ''
     while not name:
         print("Name cannot be blank.")
-        name = str(input("Name: "))
+        name = input("Name: ")
     return name
 
 
 def print_name(name, steps):
-    for i in range(0, len(name), steps):
+    for i in range(steps - 1, len(name), steps):
         print(name[i])
         # print(name[1::2])
 
