@@ -15,11 +15,16 @@ def run_tests():
     # Test initial-value movie
     movie2 = Movie("Thor: Ragnarok", 2017, "Comedy", True)
     # TODO: write tests to show this initialisation works
+    print(movie2)
 
     # test mark_required()
     # TODO: write tests to show the mark_required() method works
+    movie.mark_required()
+    assert not movie.is_watched
 
     # TODO: more tests, as appropriate
+    movie.mark_watched()
+    assert movie.is_watched
 
 
 run_tests()

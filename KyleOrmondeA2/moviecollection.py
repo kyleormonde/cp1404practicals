@@ -6,4 +6,5 @@
 
 class MovieCollection:
     """..."""
-    pass
+    def __init__(self, movies):
+        self.movies = movies
