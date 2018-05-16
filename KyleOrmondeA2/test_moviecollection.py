@@ -29,7 +29,7 @@ def run_tests():
     print("by year:")
     movie_list.sort("year")
     print(movie_list)
-    # # TODO: add more sorting tests
+    # TODO: add more sorting tests
     print("by category:")
     movie_list.sort("category")
     print(movie_list)
@@ -38,16 +38,16 @@ def run_tests():
     movie_list.sort("is_watched")
     print(movie_list)
 
-    # # TODO: Test saving movies (check CSV file manually to see results)
-    #
+    # TODO: Test saving movies (check CSV file manually to see results)
+    movie_list.save_movies()
 
-    # # TODO: Test getting the number of required and watched movies (separately)
+    # TODO: Test getting the number of required and watched movies (separately)
     print("Get number of watched / required (expect 6 total):")
     print(movie_list.get_number_watched())
     print(movie_list.get_number_required())
-    # # expect total of 6
-    # # TODO: more tests, as appropriate
-    #
+    # Expect total of 6
 
+    # TODO: more tests, as appropriate
+    
 
 run_tests()

@@ -56,3 +56,9 @@ class MovieCollection(Movie):
 
     def sort(self, sort_by):
         self.movies.sort(key=attrgetter(sort_by, "title"))
+
+    def save_movies(self):
+        movie_file_out = open('movies.csv', 'w')
+        for movie in self.movies:
+            print(movie.title + ',' + str(movie.year) + ',' + movie.category + ',' + str(movie.is_watched), file=movie_file_out)
+        movie_file_out.close()
