@@ -9,7 +9,7 @@ Movie Class
 
 class Movie:
     """Represents a Movie object"""
-    def __init__(self, title="", year=0, category="", is_watched=False):
+    def __init__(self, title="", year="", category="", is_watched=False):
         self.title = title
         self.year = year
         self.category = category

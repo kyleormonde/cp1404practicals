@@ -23,20 +23,31 @@ def run_tests():
     print("Add new movie:")
     movie_list.add_movie(Movie("Amazing Grace", 2006, "Drama", False))
     print(movie_list)
-    # #
-    # # Test sorting movies
-    # print("Sorting:")
-    # print("by year:")
-    # movie_list.sort("year")
-    # print(movie_list)
-    # TODO: add more sorting tests
 
-    # TODO: Test saving movies (check CSV file manually to see results)
+    # Test sorting movies
+    print("Sorting:")
+    print("by year:")
+    movie_list.sort("year")
+    print(movie_list)
+    # # TODO: add more sorting tests
+    print("by category:")
+    movie_list.sort("category")
+    print(movie_list)
 
-    # TODO: Test getting the number of required and watched movies (separately)
-    movie_list.get_number_watched()
-    movie_list.get_number_required()
-    # TODO: more tests, as appropriate
+    print("by is watched:")
+    movie_list.sort("is_watched")
+    print(movie_list)
+
+    # # TODO: Test saving movies (check CSV file manually to see results)
+    #
+
+    # # TODO: Test getting the number of required and watched movies (separately)
+    print("Get number of watched / required (expect 6 total):")
+    print(movie_list.get_number_watched())
+    print(movie_list.get_number_required())
+    # # expect total of 6
+    # # TODO: more tests, as appropriate
+    #
 
 
 run_tests()

@@ -3,33 +3,31 @@ CP1404: Assignment 2
 Movie Collection Class
 """
 from movie import Movie
-
+from operator import attrgetter
 
 # create your MovieCollection class in this file
 
 
-class MovieCollection:
+class MovieCollection(Movie):
     """Represent a Movie List"""
 
     def __init__(self):
         self.movies = []
 
-    def __repr__(self):
-        return self.__str__()
-
     def __str__(self):
-        return "{}".format(self.movies)
+        # return "{}".format(self.movies)
+        return str([str(movie) for movie in self.movies])
 
-    def load_movies(self, movie_file):
+    def load_movies(self, movie_file_name):
         movies = []
-        movie_file_in = open(movie_file, 'r')
+        movie_file_in = open(movie_file_name, 'r')
         for movie in movie_file_in:
             movies.append(list(movie.strip('\n').split(',')))
         movie_file_in.close()
 
         for movie in movies:
             title = movie[0]
-            year = movie[1]
+            year = int(movie[1])
             category = movie[2]
             is_watched = movie[3]
             if is_watched == 'y':
@@ -55,3 +53,6 @@ class MovieCollection:
             if movie.is_watched:
                 watched_movies += 1
         return watched_movies
+
+    def sort(self, sort_by):
+        self.movies.sort(key=attrgetter(sort_by, "title"))
